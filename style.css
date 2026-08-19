@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Sacramento&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: radial-gradient(circle at center, #fff0f5 0%, #ffd1dc 50%, #b5e2fa 100%); font-family: 'Quicksand', sans-serif; height: 100vh; height: 100dvh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #4a4a4a; position: relative; }
+.particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 1; }
+.particle { position: absolute; font-size: 16px; animation: floatUp 4s linear infinite; opacity: 0.7; }
+@keyframes floatUp { 0% { transform: translateY(100vh) scale(0.5); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(-10vh) scale(1.2); opacity: 0; } }
+#app { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.stage { text-align: center; width: 90%; max-width: 400px; position: absolute; transition: opacity 0.5s ease; }
+.hidden { display: none !important; opacity: 0; }
+.intro-title { font-size: 1.4rem; color: #c71585; margin-bottom: 20px; font-weight: 700; }
+.locked-box { font-size: 80px; margin: 20px 0; animation: pulseGlow 2s infinite; }
+.countdown-clock { font-size: 2.2rem; font-weight: 700; color: #ff1493; margin-top: 15px; background: rgba(255, 255, 255, 0.6); padding: 10px 20px; border-radius: 15px; display: inline-block; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.gift-container { cursor: pointer; padding: 20px; animation: bounceGentle 2s ease-in-out infinite; }
+.gift-box { font-size: 90px; filter: drop-shadow(0 10px 15px rgba(219, 112, 147, 0.4)); transition: transform 0.2s ease; }
+.gift-box:active { transform: scale(0.9); }
+@keyframes bounceGentle { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+.tap-hint { margin-top: 15px; font-size: 1.1rem; font-weight: 700; color: #ff1493; animation: pulseGlow 1.5s infinite; }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+.countdown-num { font-size: 90px; font-weight: 700; color: #ff1493; animation: popNumber 1s infinite; }
+@keyframes popNumber { 0% { transform: scale(0.8); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.shake-animation { animation: shakeGift 0.4s ease-in-out infinite alternate !important; }
+@keyframes shakeGift { 0% { transform: rotate(-10deg) scale(1.1); } 100% { transform: rotate(10deg) scale(1.2); } }
+.cinematic-reveal { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #ff1493, #1e90ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: zoomInReveal 1s ease-out forwards; }
+.name-highlight { font-family: 'Sacramento', cursive; font-size: 3.5rem; display: block; color: #ff1493; -webkit-text-fill-color: #ff1493; }
+@keyframes zoomInReveal { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); padding: 22px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-height: 60vh; overflow-y: auto; margin-top: 20px; }
+#message { font-size: 0.95rem; line-height: 1.6; color: #4a4a4a; }
+.ending { margin-top: 18px; font-weight: 700; color: #d81b60; }
